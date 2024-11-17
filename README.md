@@ -1,4 +1,4 @@
-# Fig_Fri_Week_46_2024
+# Fig_Fri_Week_46_2024 - Italian and Frence Wines
 Plotly's weekly data visualization initiative 
 
 Italy and France produce more than half of the wines that fall under the Protected Designation of Origin label within the European Union.
