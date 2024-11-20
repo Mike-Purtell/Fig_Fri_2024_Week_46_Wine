@@ -44,7 +44,10 @@ fig = px.violin(
     x='Color',
     y='Max_yield_hl',
     facet_col='COUNTRY',
-    title='Max allowed yield of hectoliters per hectare',
+    title= (
+        "<a href='https://en.wikipedia.org/wiki/Yield_(wine)' " + 
+        "style='color:blue;'>Max allowed yield of hectoliters per hectare</a>"
+    ),
     color='Color', 
     color_discrete_map=wine_colors,
     template='plotly_dark',
@@ -59,3 +62,4 @@ fig.for_each_annotation(lambda a: a.update(text=a.text.replace("COUNTRY=", "")))
 fig.update_xaxes(title='')
 
 fig.show()
+fig.write_html('Wines.html')
