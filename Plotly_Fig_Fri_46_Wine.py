@@ -44,21 +44,27 @@ fig = px.violin(
     x='Color',
     y='Max_yield_hl',
     facet_col='COUNTRY',
-    title= (
-        "<a href='https://en.wikipedia.org/wiki/Yield_(wine)' " + 
-        "style='color:blue;'>Max allowed yield of hectoliters per hectare</a>"
+    title = (
+        'Maximum permitted wine yield (hectoliters per hectare) in France and Italy'
+        '<a href="https://en.wikipedia.org/wiki/Yield_(wine)" ' + 
+        'style="color:blue;"> Wikipedia LINK</a>'
     ),
     color='Color', 
     color_discrete_map=wine_colors,
     template='plotly_dark',
 )
 
-fig.update_layout(font=dict(size=16))
+fig.update_layout(
+    font=dict(size=16), 
+    showlegend=False,
+    # xaxis_title=dict(text='Date', font=dict(size=16, color='#FFFFFF')),
+    yaxis_title=dict(text=''),
+)
 
 # next line changes facet labels from COUNTRY=xyz, to just show xyz
 fig.for_each_annotation(lambda a: a.update(text=a.text.replace("COUNTRY=", "")))
 
-# this syntax is specific to the faceted plot
+# # this syntax is specific to the faceted plot
 fig.update_xaxes(title='')
 
 fig.show()
