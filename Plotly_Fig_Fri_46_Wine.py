@@ -47,7 +47,7 @@ fig = px.violin(
     title = (
         'Maximum permitted wine yield (hectoliters per hectare) in France and Italy'
         '<a href="https://en.wikipedia.org/wiki/Yield_(wine)" ' + 
-        'style="color:blue;"> Wikipedia LINK</a>'
+        'style="color:yellow;"> Wikipedia LINK</a>'
     ),
     color='Color', 
     color_discrete_map=wine_colors,
